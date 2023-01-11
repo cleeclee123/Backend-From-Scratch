@@ -1,3 +1,4 @@
+// data transfer object delete user
 export interface PutUserDto {
   id: string;
   email: string;

@@ -5,6 +5,8 @@ import debug from "debug";
 
 const log: debug.IDebugger = debug("app:users-controller");
 
+// interface crud => userservices => usercontroller
+// controllers are stateless (manager analogy, handles incoming requests)
 class UsersController {
   async listUsers(req: express.Request, res: express.Response) {
     const users = await usersService.list(100, 0);

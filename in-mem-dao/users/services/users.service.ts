@@ -4,6 +4,7 @@ import { CreateUserDto } from "../dto/create.user.dto.js";
 import { PutUserDto } from "../dto/put.user.dto.js";
 import { PatchUserDto } from "../dto/patch.user.dto.js";
 
+// service are not stateless (worker analogy, implements the incoming request from the controller)
 class UsersService implements CRUD {
   async create(resource: CreateUserDto) {
     return UsersDao.addUser(resource);

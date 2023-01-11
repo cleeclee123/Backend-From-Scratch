@@ -4,6 +4,7 @@ import debug from "debug";
 
 const log: debug.IDebugger = debug("app:users-controller");
 
+// helper functions for validation during sign up/post/patch
 class UsersMiddleware {
   async validateRequiredUserBodyFields(
     req: express.Request,
@@ -75,6 +76,7 @@ class UsersMiddleware {
     }
   }
 
+  // helper function
   async extractUserId(
     req: express.Request,
     res: express.Response,

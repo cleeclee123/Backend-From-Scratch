@@ -3,6 +3,8 @@ import UsersController from "./controllers/users.controller.js";
 import UsersMiddleware from "./middleware/users.middleware.js";
 import express from "express";
 
+// extends from the CommonRoutesConfig abstract class:
+// abstract class can have state with instance variables vs interface
 export class UsersRoutes extends CommonRoutesConfig {
   constructor(app: express.Application) {
     super(app, "UsersRoutes");

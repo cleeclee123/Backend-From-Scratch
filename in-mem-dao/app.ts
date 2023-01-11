@@ -1,6 +1,5 @@
 import express from "express";
 import * as http from "http";
-
 import * as winston from "winston";
 import * as expressWinston from "express-winston";
 import cors from "cors";
@@ -28,14 +27,10 @@ const loggerOptions: expressWinston.LoggerOptions = {
   ),
 };
 
-if (!process.env.DEBUG) {
-  loggerOptions.meta = false; // when not debugging, log requests as one-liners
-}
-
 // initialize the logger with the above configuration
 app.use(expressWinston.logger(loggerOptions));
 
-// adding the UserRoutes to our array,
+// adding the UserRoutes to array
 routes.push(new UsersRoutes(app));
 
 const runningMessage = `Server running at http://localhost:${port}`;

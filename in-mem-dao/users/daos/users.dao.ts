@@ -6,6 +6,7 @@ import debug from "debug";
 
 const log: debug.IDebugger = debug("app:in-memory-dao");
 
+// Data Access Object (in memory database)
 // Using the singleton pattern (node caches same instance of class/same array of ids)
 class UsersDao {
   public users: Array<CreateUserDto> = [];

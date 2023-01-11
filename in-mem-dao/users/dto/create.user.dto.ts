@@ -1,3 +1,4 @@
+// data transfer object create user
 export interface CreateUserDto {
   id: string;
   email: string;
